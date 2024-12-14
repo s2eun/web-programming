@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변비에 좋은 식품 기억하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .page-navigation {
+            margin-top: 30px;
+        }
+        .page-navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 1em;
+        }
+        .page-navigation a:hover {
+            background-color: #0056b3;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 1.2em;
+        }
+        .checkbutton1 {
+            font-size: 1.2em;
+            padding: 5px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkbutton1:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>변비에 좋은 식품 기억하기 - Page 14</h1>
+    <style>
+      .grid-item input {
+        font-size: 30px;
+      }
+    </style>
+
+    <div class="grid-container">
+        <div class="grid-item" id="item1"><input type="text"></div>
+        <div class="grid-item" id="item2"><input type="text"></div>
+        <div class="grid-item" id="item3"><input type="text"></div>
+        <div class="grid-item" id="item4"><input type="text"></div>
+        <div class="grid-item" id="item5"><input type="text"></div>
+        <div class="grid-item" id="item6"><input type="text"></div>
+    </div>
+
+    <div id="message">변비에 좋은 식품을 적어보세요!</div>
+
+    <div class="page-navigation">
+        <button class="checkbutton1" onclick="checkFoods()">확인</button>
+    </div>
+
+    <script>
+        const correctFoods = ["키위", "양배추", "현미", "자두", "오이", "팥"];
+        let selectedFoods = [];
+ 
+        function updateSelectedFoods() {
+            selectedFoods = [];
+            const inputs = document.querySelectorAll('.grid-container input');  
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {  
+                    selectedFoods.push(input.value.trim());  
+                }
+            });
+            console.log(selectedFoods);  
+        }
+
+        const inputs = document.querySelectorAll('.grid-container input');
+        inputs.forEach(input => {
+            input.addEventListener('input', updateSelectedFoods);
+        });
+
+        function checkFoods() {
+            const inputs = document.querySelectorAll('.grid-container input');
+            const message = document.getElementById("message");
+
+            let allCorrect = true;
+            let incorrectFields = [];
+
+            inputs.forEach((input, index) => {
+                const userInput = input.value.trim();
+                if (userInput && !correctFoods.includes(userInput)) {
+                    incorrectFields.push(input); 
+                    allCorrect = false;
+                }
+            });
+
+            if (!allCorrect) {
+                alert("틀렸습니다! 다시 시도해보세요.");
+                incorrectFields.forEach(field => {
+                    field.value = '';
+                });
+            } else {
+                alert("정답입니다! 다음페이지로 이동합니다");
+            }
+        }
+    </script>
+</body>
+</html>

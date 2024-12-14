@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변비에 좋은 식품 기억하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .images-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .images-container img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .images-container img.selected {
+            border-color: green;
+            box-shadow: 0 0 10px green;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .page-navigation {
+            margin-top: 30px;
+        }
+        .page-navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 1em;
+        }
+        .page-navigation a:hover {
+            background-color: #0056b3;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 1.2em;
+        }
+        .checkbutton1 {
+            font-size: 1.2em;
+            padding: 5px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkbutton1:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>변비에 좋은 식품 찾기 - Page 15</h1>
+    <style>
+      .grid-item input {
+        font-size: 30px;
+      }
+    </style>
+
+    <div class="images-container"> 
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMzBfMjg0%2FMDAxNzMwMjc0MjcyNjUx.shB3tGTDM1oykPKQw9Vd4hd7l384ZyA4BJvjMVADrf4g.OuqmFHTVsQRu939kXJmdtO048gO2RqCnnG11PgLCqA0g.JPEG%2F%25C4%25BF%25C7%25C7.jpg&type=sc960_832" alt="커피" onclick="selectImage(this, 'Coffee')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA3MDhfNSAg%2FMDAxNzIwNDM3MTUxNjc5._SUqws4M8sufau7l_x0UGkkRgdqlbOZ-pM-Ay0gsxV4g.4PL2D5--fmu6EhPua_y6diX7yCypmbft_Udbxa_zY1Ag.JPEG%2F4.jpg&type=sc960_832" alt="키위" onclick="selectImage(this, 'Kiwi')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MThfMjI5%2FMDAxNzE4Njk0ODI2NjUw.tbSbDLwBFVORueDU7gEbgk5s7-V18T6heNqU4KUPyScg.u4iEDtReR6zFQYY0mEo4KKNIIWxYsPy3wIwwdLZc0Usg.JPEG%2F%25C0%25DA%25B5%25CE1.jpg&type=sc960_832" alt="자두" onclick="selectImage(this, 'Plum')">
+        <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.kr.gcp-karroter.net%2Forigin%2Farticle%2F202411%2Fe4308510ed8f2f3dd8ae6fb8220a9ca0916ccf86a0e32fe592b0e677397db8c4_0.webp%3Ff%3Dwebp%26q%3D95%26s%3D1200x630%26t%3Dcover&type=sc960_832" alt="팥" onclick="selectImage(this, 'Red Beans')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MTlfMTg4%2FMDAxNzE4Nzg3Nzg1NzI2.YxD50sTZxkMaV0fa1W_k0eXijUWcVbBBfGxOMD0JP-Mg.lZy74FEJoQXisW4Xahptpniy55CjdDpG-3J904feR4gg.JPEG%2F20240216%25A3%25DF125227.jpg&type=sc960_832" alt="빵" onclick="selectImage(this, 'Bread')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDExMjRfNDQg%2FMDAxNzMyNDQ2MDczMTk5.G3xHWs8IaW8-u7DygakcClZUv58rpSuT6mGk1zfs2hIg.AzRftxeOV5dUZCOApeYCSEUX3i9VqZy0gVFrqNjyfKEg.PNG%2F20241124_195947.png&type=sc960_832" alt="양배추" onclick="selectImage(this, 'Cabbage')">
+        <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg-cf.kurly.com%2Fhdims%2Fresize%2F%253E720x%2Fquality%2F90%2Fsrc%2Fshop%2Fdata%2Fgoodsview%2F20240411%2Fgv40000814857_1.jpg&type=sc960_832" alt="현미미" onclick="selectImage(this, 'Brown Rice')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20240524_11%2F17165469685667kSGw_PNG%2F43849652366507997_161016158.png&type=sc960_832" alt="삼겹살" onclick="selectImage(this, 'Pork')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDRfMTgy%2FMDAxNzI3OTc0NDk0MTgx.SgmdhyrAo5d7Gqdn8m2RdA8fs3fng9b6BcGQBiZuNXwg.JxWxh_HQmd0I0kYoYrK34BwHG1FD3_U36LaNW1WK5Fwg.JPEG%2F20241004_015407.jpg&type=sc960_832" alt="치킨" onclick="selectImage(this, 'Fried Food')">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MDdfNyAg%2FMDAxNzE1MDUxNTk5ODky.GCrDx1XBYHkMoa1ki7qMmQXaMBedACSyopyMciOjmhUg.uFkfpeN3ZdmMiHXYAmB14Qg3ZEJNIXLOTBqGUEliUDcg.JPEG%2F20240507_095606.jpg&type=sc960_832" alt="오이" onclick="selectImage(this, 'Cucumber')">
+    </div>
+
+    <div id="message">변비에 좋은 식품그림을 모두 선택하세요!</div>
+
+    <div class="page-navigation">
+        <button class="checkbutton1" onclick="checkFoods()">확인</button>
+    </div>
+
+    <script>
+        const correctFoods = ["Kiwi", "Plum", "Red Beans", "Cabbage", "Brown Rice", "Cucumber"];
+        let selectedFoods = [];
+        let currentPage = 15;
+
+        function selectImage(img, foodName) {
+            if (!img.classList.contains('selected')) {
+                img.classList.add('selected');
+                selectedFoods.push(foodName);
+            } else {
+                img.classList.remove('selected');
+                selectedFoods = selectedFoods.filter(item => item !== foodName);
+            }
+        }
+
+        function checkFoods() {
+            const message = document.getElementById("message");
+            let allCorrect = correctFoods.every(food => selectedFoods.includes(food));
+            if (allCorrect && selectedFoods.length === correctFoods.length) {
+                alert("정답입니다! 다음페이지로 이동합니다");
+            } else {
+                alert("틀렸습니다! 다시 시도해보세요.");
+                const selectedImages = document.querySelectorAll(".images-container img.selected");
+                selectedImages.forEach(img => {
+                    img.classList.remove("selected");
+                });
+                selectedFoods = [];               
+            }
+        };
+    </script>
+</body>
+</html>
